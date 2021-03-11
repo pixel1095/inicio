@@ -1,0 +1,111 @@
+:root{
+    --colorTextos: #49354567
+}
+.ctn-all{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+}
+form{
+    background: #fff;
+    width: 40%;
+    padding: 10px 0;
+    box-shadow: 0 0 6px 0 #fff;
+    border-radius: 10px;
+}
+.form{
+    width: 100%;
+    margin: auto;
+}
+form .group{
+    position: relative;
+    margin: 40px;
+}
+input, textarea{
+    background: none;
+    color: #9c9c9c;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+}
+input:focus, textarea:focus{
+    outline: none;
+    color: rgb(94, 93, 93);
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label, 
+textarea:valid~label{
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+label{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+.barra::before{
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: #2196f3;
+    transition: 0.3s ease all;
+    left: 0%;
+}
+input:focus~.barra::before, textarea:focus~.b arra::before{
+    width: 100%;
+}
+
+button{
+    background: #4503C8;
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    margin: auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1100px){
+    form{
+        width: 60%;
+    }
+}
+@media screen and (max-width:600px){
+    form{
+        width: 70%;
+    }
+}
+@media screen and (max-width:450px){
+    form{
+        width: 80%;
+    }
+}
+@media screen and (max-width:300px){
+    form{
+        width: 90%;
+    }
+}

@@ -1,0 +1,284 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: monospace,sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f6f6f6;
+}
+.header-content{
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 20;
+}
+
+.logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #4503C8;
+}
+#whatssap {
+    height: 100%;
+    margin: 0px 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    display: none;
+    transform: translate(-60%, 25%)
+}
+.fa-whatsapp{
+    transform: translateX(-20px) translateY(20px);
+    color: white;
+    background: #00E676;
+    padding: 2px;
+    border-radius: 5px;
+    
+}
+
+#whatssap a{
+    color: #00E676;
+}
+/*Buscador de contenido*/
+
+#ctn-icon-search{
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ctn-icon-search i{
+    font-size: 18px;
+    color: #777777;
+    cursor: pointer;
+    transition: all 100ms;  
+
+}
+
+#ctn-icon-search i:hover{
+    color: #4503C8;
+    font-size: 20px;
+}
+
+#ctn-bars-search{
+    position: fixed;
+    top: -80px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    z-index: 9;
+    transition: all 600ms;
+}
+
+#ctn-bars-search input{
+display: block;
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    font-size: 17px;
+    outline: 0;
+}
+
+#box-search{
+position: fixed;
+    top: 164px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+    width: 1200px;
+    background: #fff;
+    overflow: hidden;
+    display: none;
+}
+
+#box-search li a{
+display: block;
+    width: 1200px;
+    color: #777777;
+    padding: 12px 20px;
+}
+
+#box-search li a:hover{
+background: #f3f3;
+    padding: 15px 23px;
+}
+
+
+#box-search li a i{
+margin-right: 10px;
+    color: #777777;
+}
+
+#cover-ctn-search{
+width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 7;
+    transition: all 500ms;
+    top: -100%
+}
+
+/*Footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #fff;
+    margin-top: 40px;
+}
+
+.container-footer footer{
+    max-width: 900px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+    
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px -7px black;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+    transition: all 300ms;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+    background: #41579A;
+    color: #fff;
+    font-size: 25px;
+        box-shadow: 0px 2px 20px 2px black;
+}
+
+footer .redes-footer .fa-twitter:hover{
+    background: #00ffff;
+    color: #fff;
+    font-size: 25px;
+    box-shadow: 0px 2px 20px 2px black;
+}
+
+footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #FCDE30, #E9712A, #D2313B, #AE4198, #7540A1, #5443A8);
+    color: #fff;
+    font-size: 25px;
+    box-shadow: 0px 2px 20px 2px black;
+}
+
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+}
+
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+/* Responsive Design - adaptable a dispositivos moviles*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    #ctn-bars-search,
+    #ctn-bars-search input,
+    #box-search{
+    width: 100%
+    }
+
+}
+/*Caja de comentarios*/
+
+.ctn-data{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+.p-datta{
+    font-family: Arial;
+    font-size: 18px;
+    background: #DAC600;
+    margin-top: 10px;
+}
+
+.ctn-lbl-comentar{
+    width: 100%;
+    text-align: center;
+    
+}
+.lbl-comentar{
+    font-family: arial;
+    font-size: 20px;
+}
+
+/*Filtrado*/
+
+/*responsive*/
+@media screen and (max-width: 800px){
+
+.logo-img {
+    width: 100px;
+}
+    #whatssap{
+        display: block;
+    }
+}
